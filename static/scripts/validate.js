@@ -4,6 +4,11 @@ $(function() {
   var form = $('#form');
   var iptNumber = $('#number');
 
+
+  form.on('submit', function(e){
+    e.preventDefault();
+  });
+
   iptNumber.keydown(function(e) {
     var a = e.key;
     if (a.length == 1) return /[0-9]|\+|-/.test(a);

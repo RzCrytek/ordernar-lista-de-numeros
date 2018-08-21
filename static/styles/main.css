@@ -57,7 +57,7 @@ header h1{
   outline: none;
 }
 
-.message-error{
+.message{
   font-size: 15px;
   border-radius: 5px;
   display: block;
@@ -73,9 +73,18 @@ header h1{
   transition: .2s all;
 }
 
-.message-error.active{
+.message.active{
   padding: 5px;
   transform: scale(1);
+}
+
+.message.success{
+  padding: 5px;
+  transform: scale(1);
+
+  box-shadow: 0 0 0 1px #a3c293 inset, 0 0 0 0 transparent;
+  background-color: #fcfff5;
+  color: #2c662d;
 }
 
 #box-list-number{
