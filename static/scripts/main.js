@@ -10,7 +10,6 @@ $(function() {
   var form = $('#form');
 
   var ListNumber = [];
-  var ListOrderNumbers = [];
 
   function addNumberList(e){
     e.preventDefault();
@@ -32,15 +31,13 @@ $(function() {
   }
 
   function checkNumber(num){
-    var newList;
     var newNumber;
     var numExist = ListNumber.indexOf(num);
     
     if (numExist == -1) {
-      newList = ListNumber.push(num) -1;
-      newNumber = '<p class="num" data-num="'+num+'">'+num+'</p>';
+      ListNumber.push(num) -1;
+      newNumber = '<p class="num">'+num+'</p>';
       boxListNumber.append(newNumber);
-      // console.log(newList);
     } else {
 
       BoxMsg.addClass('active');
@@ -52,15 +49,7 @@ $(function() {
       },1500);
     }
 
-    // console.log(ListNumber);
-    // console.log(newList);
-
-    // orderNumbers(ListNumber);
-
   }
-
-  // var i = 0;
-  // var j = 0;
 
   function orderNumbers(){
 
@@ -94,26 +83,6 @@ $(function() {
         }
       }
     }
-
-    // if( i < ListNumber.length ){
-    //   if( j < (ListNumber.length-i) ){
-
-    //     if ( ListNumber[j] > ListNumber[j+1] ) {
-
-    //       mayor = ListNumber[j];
-
-    //       ListNumber[j] = ListNumber[j+1];
-
-    //       ListNumber[j+1] = mayor;
-
-    //     }
-    //     j++;
-
-    //   }else{
-    //     j=0;
-    //     i++;
-    //   }
-    // }
 
     ListNumber.forEach(function(elem, val) {
       item = '<p class="num">'+elem+'</p>';
